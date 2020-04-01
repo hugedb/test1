@@ -21,11 +21,11 @@ public class GridViewer
                         break;
                         
                     case Maze.END:
-                        System.out.print("dd");
+                        System.out.print("ddd");
                         break;
                         
                     case Maze.VISITED:
-                        System.out.print("ee");
+                        System.out.print("eee");
                         break;
                         
                     default:
