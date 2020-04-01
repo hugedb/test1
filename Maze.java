@@ -16,13 +16,13 @@ public class Maze
     public static void main(String[] args)
     {
         int[][] grid = {
-            { WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL, WALL},
-            {START, EMPTY,  WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, WALL},
+            { WALL,  WALL,  EMPTY,  WALL,  EMPTY,  WALL,  WALL,  WALL,  WALL, WALL},
+            {START, EMPTY,  EMPTY,  EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, WALL},
             { WALL, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, EMPTY,  WALL, WALL},
             { WALL,  WALL,  WALL,  WALL, EMPTY,  WALL, EMPTY,  WALL, EMPTY, WALL},
-            { WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, EMPTY, EMPTY, EMPTY, WALL},
+            { WALL, EMPTY, EMPTY, WALL, WALL,  WALL, EMPTY, EMPTY, EMPTY, WALL},
             { WALL,  WALL, EMPTY,  WALL,  WALL, EMPTY, EMPTY,  WALL, EMPTY, WALL},
-            { WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL,  WALL, EMPTY,  END},
+            { WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  EMPTY,  WALL, EMPTY,  END},
             { WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL, WALL},
         };
                 
@@ -68,14 +68,14 @@ public class Maze
                     break;
             
                 default:
-                    System.out.println("MESSAGE 1"); // Invalid direction.
+                System.out.println("you have no idea wher youre going"); // Invalid direction.
             }
             
             if(currentRow < 0 || currentCol < 0
                 || currentRow >= grid.length || currentCol >= grid[currentRow].length)
             {
                 done = true;
-                System.out.println("MESSAGE 2"); // Out of bounds.
+                System.out.println("you fall into the chasm of doom"); // Out of bounds.
             }
             else
             {
@@ -86,13 +86,13 @@ public class Maze
                 else if(grid[currentRow][currentCol] == WALL)
                 {
                     done = true;
-                    System.out.println("MESSAGE 3"); // Hit wall.
+                    System.out.println("you stumble blindly into a solid concrete wall"); // Hit wall.
                 }
                 else if(grid[currentRow][currentCol] == END)
                 {
                     done = true;
                     solved = true;
-                    System.out.println("MESSAGE 4"); // Solved.
+                    System.out.println("solved"); // Solved.
                 }
                 else
                 {} // Do nothing
@@ -103,7 +103,7 @@ public class Maze
         
         if(!solved)
         {
-            System.out.println("MESSAGE 5"); // Did not reach the end.
+            System.out.println("failed to escape"); // Did not reach the end.
         }
 Viewer.view(grid);        
 
