@@ -16,7 +16,7 @@ public class Maze
     public static void main(String[] args)
     {
         int[][] grid = {
-            { WALL,  WALL,  EMPTY,  WALL,  EMPTY,  WALL,  WALL,  WALL,  WALL, WALL},
+            { WALL,  EMPTY,  EMPTY,  WALL,  EMPTY,  WALL,  WALL,  WALL,  WALL, WALL},
             {START, EMPTY,  EMPTY,  EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, WALL},
             { WALL, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, EMPTY,  WALL, WALL},
             { WALL,  WALL,  WALL,  WALL, EMPTY,  WALL, EMPTY,  WALL, EMPTY, WALL},
