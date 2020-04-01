@@ -71,14 +71,15 @@ public class Maze
                 System.out.println("you have no idea wher youre going"); // Invalid direction.
             }
             
-            if(currentRow < 0 || currentCol < 0
-                || currentRow >= grid.length || currentCol >= grid[currentRow].length)
+            if(Row < 0 || currentCol < 0
+                || Row >= grid.length || currentCol >= grid[currentRow].length)
             {
                 done = true;
                 System.out.println("you fall into the chasm of doom"); // Out of bounds.
             }
             else
             {
+
                 switch(grid[currentRow][currentCol])
                 {
                     case Maze.EMPTY:
