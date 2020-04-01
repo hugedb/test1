@@ -68,14 +68,14 @@ public class Maze
                     break;
             
                 default:
-                    System.out.println("MESSAGE 1"); // Invalid direction.
+                    System.out.println("where youre going"); // Invalid direction.
             }
             
             if(currentRow < 0 || currentCol < 0
                 || currentRow >= grid.length || currentCol >= grid[currentRow].length)
             {
                 done = true;
-                System.out.println("MESSAGE 2"); // Out of bounds.
+                System.out.println("fall into the chasm of doom"); // Out of bounds.
             }
             else
             {
