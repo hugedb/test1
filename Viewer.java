@@ -9,23 +9,23 @@ public class GridViewer
                 switch(grid[i][j])
                 {
                     case Maze.EMPTY:
-                        System.out.print("  ");
+                        System.out.print("aa");
                         break;
                         
                     case Maze.WALL:
-                        System.out.print("##");
+                        System.out.print("bb");
                         break;
                         
                     case Maze.START:
-                        System.out.print("^^");
+                        System.out.print("cc");
                         break;
                         
                     case Maze.END:
-                        System.out.print("$$");
+                        System.out.print("dd");
                         break;
                         
                     case Maze.VISITED:
-                        System.out.print("..");
+                        System.out.print("ee");
                         break;
                         
                     default:
